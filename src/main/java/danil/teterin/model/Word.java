@@ -29,7 +29,7 @@ public class Word extends AbstractEntity{
     public String toString() {
         return "Word{" +
                 "word='" + word + '\'' +
-                ", count=" + count +
+                ", c ount=" + count +
                 '}';
     }
 }
