@@ -12,13 +12,11 @@ public class SimbirSoftParserTask {
     public static void main(String[] args){
         ApplicationContext applicationContext = SpringApplication.run(SimbirSoftParserTask.class, args);
         IParseUrl parserUrl = applicationContext.getBean(ParseUrlImpl.class);
-        if(args.length != 1){
+        if(args.length != 1) {
             System.out.println("Enter one arg: link to download and count");
-            parserUrl.parseUrl("https://www.simbirsoft.com/");
             System.exit(1);
-        }else {
-            parserUrl.parseUrl(args[0]);
         }
+        parserUrl.parseUrl(args[0]);
         System.exit(-1);
     }
 }
